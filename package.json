@@ -1,0 +1,21 @@
+{
+  "name": "kebab-case",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/assets/tailwind.css --minify",
+    "postinstall": "npm run copy:fontawesome",
+    "copy:fontawesome": "mkdir -p public/assets/fontawesome/css public/assets/fontawesome/webfonts && cp node_modules/@fortawesome/fontawesome-free/css/all.min.css public/assets/fontawesome/css/ && cp node_modules/@fortawesome/fontawesome-free/webfonts/* public/assets/fontawesome/webfonts/",
+    "dev": "npm run build:css && wrangler dev",
+    "deploy": "npm run build:css && wrangler deploy",
+    "db:migrate": "wrangler d1 execute kebab-case-db --file=./schema.sql",
+    "db:seed": "wrangler d1 execute kebab-case-db --file=./seed.sql",
+    "db:migrate:remote": "wrangler d1 execute kebab-case-db --remote --file=./schema.sql",
+    "db:seed:remote": "wrangler d1 execute kebab-case-db --remote --file=./seed.sql"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "@tailwindcss/typography": "^0.5.20",
+    "tailwindcss": "^3.4.19",
+    "wrangler": "^4.0.0"
+  }
+}

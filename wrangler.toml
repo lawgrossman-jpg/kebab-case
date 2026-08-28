@@ -1,7 +1,15 @@
 name = "kebab-case"
+main = "src/worker.js"
 compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
 workers_dev = true
 
 [assets]
-directory = "./"
+directory = "./public"
+binding = "ASSETS"
 not_found_handling = "404-page"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "kebab-case-db"
+database_id = "REPLACE_WITH_REAL_DATABASE_ID"
