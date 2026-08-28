@@ -12,4 +12,4 @@ not_found_handling = "404-page"
 [[d1_databases]]
 binding = "DB"
 database_name = "kebab-case-db"
-database_id = "REPLACE_WITH_REAL_DATABASE_ID"
+database_id = "0102a9f0-75f5-4ee5-8cf6-a8f0f875fd6a"
