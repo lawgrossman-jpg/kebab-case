@@ -119,7 +119,7 @@ ${renderHeader(c, { activePath: '/' })}
         <div class="relative w-full max-w-md bg-gradient-to-b from-navy-800/90 to-navy-950/90 border border-slate-700/80 rounded-2xl p-6 shadow-2xl backdrop-blur-md">
           <div class="absolute -top-3 right-6 bg-silver-300 text-navy-950 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow">משרד עורכי דין</div>
           <div class="flex items-center gap-4 mb-6 pt-2">
-            <div class="w-16 h-16 rounded-full bg-navy-900 border-2 border-silver-300/50 flex items-center justify-center text-silver-300 font-serif text-2xl font-bold shadow">IG</div>
+            <div class="w-16 h-16 rounded-full bg-white border-2 border-silver-300/50 flex items-center justify-center p-2 shadow"><img src="/assets/logo.png" alt="לוגו" class="w-full h-full object-contain"></div>
             <div>
               <h3 class="text-xl font-bold text-white">${escapeHtml(c.site_name_short)}, עו"ד</h3>
               <p class="text-xs text-silver-300">נזיקין • רשלנות רפואית • ביטוח • אזרחי</p>
@@ -164,7 +164,7 @@ ${renderHeader(c, { activePath: '/' })}
       <div class="lg:col-span-5 relative">
         <div class="relative z-10 bg-navy-900 text-white rounded-3xl p-8 shadow-2xl border border-slate-700">
           <div class="text-center pb-6 border-b border-slate-800">
-            <div class="w-24 h-24 rounded-full bg-slate-800 border-4 border-silver-300 mx-auto mb-4 flex items-center justify-center font-serif text-3xl font-bold text-silver-300 shadow">IG</div>
+            <div class="w-24 h-24 rounded-full bg-white border-4 border-silver-300 mx-auto mb-4 flex items-center justify-center p-3 shadow"><img src="/assets/logo.png" alt="לוגו" class="w-full h-full object-contain"></div>
             <h3 class="text-2xl font-bold">${escapeHtml(c.site_title)}</h3>
             <p class="text-silver-300 text-sm font-medium">מייסד ובעל המשרד</p>
           </div>
@@ -227,7 +227,7 @@ ${renderHeader(c, { activePath: '/' })}
       <div class="grid lg:grid-cols-12">
         <div class="lg:col-span-5 bg-navy-900 text-white p-8 sm:p-12 flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-navy-800 border border-slate-700 flex items-center justify-center font-serif text-xl font-bold text-silver-300 mb-6">IG</div>
+            <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-1.5 mb-6"><img src="/assets/logo.png" alt="לוגו" class="w-full h-full object-contain"></div>
             <h3 class="text-2xl font-bold mb-3">${escapeHtml(c.contact_heading)}</h3>
             <p class="text-slate-300 text-sm mb-8 leading-relaxed">${escapeHtml(c.contact_paragraph)}</p>
             <div class="space-y-6 text-sm">

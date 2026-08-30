@@ -56,11 +56,8 @@ export function renderHeader(c, { activePath = '/' } = {}) {
   <header class="sticky top-0 z-40 bg-navy-900/95 backdrop-blur-md border-b border-slate-800 text-white shadow-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="/" class="flex items-center gap-3 group">
-        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-800 to-navy-950 border border-slate-700 flex items-center justify-center p-1.5 shadow-inner group-hover:border-silver-300 transition duration-300">
-          <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow">
-            <text x="32" y="72" font-family="'Playfair Display', serif" font-weight="900" font-size="68" fill="#FFFFFF">I</text>
-            <text x="42" y="70" font-family="Georgia, serif" font-style="italic" font-weight="bold" font-size="62" fill="#C0C0C0" opacity="0.9">G</text>
-          </svg>
+        <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-1.5 shadow-inner group-hover:border-silver-300 transition duration-300">
+          <img src="/assets/logo.png" alt="לוגו ${nameShort}" class="w-full h-full object-contain">
         </div>
         <div class="flex flex-col">
           <span class="font-extrabold text-xl tracking-tight leading-tight text-white group-hover:text-silver-300 transition">${nameShort}</span>
@@ -110,7 +107,7 @@ export function renderFooter(c) {
   <footer class="bg-navy-950 text-slate-400 py-12 border-t border-slate-800 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-navy-900 border border-slate-700 flex items-center justify-center font-serif text-sm font-bold text-silver-300">IG</div>
+        <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center p-1"><img src="/assets/logo.png" alt="לוגו" class="w-full h-full object-contain"></div>
         <div>
           <div class="font-bold text-white text-sm">${escapeHtml(c.site_name_short)} • משרד עורכי דין</div>
           <div>${escapeHtml(c.footer_note)} © ${year} | ${escapeHtml(c.contact_address)}</div>

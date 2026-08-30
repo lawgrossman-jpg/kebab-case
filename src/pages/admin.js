@@ -7,7 +7,7 @@ export function renderLoginPage({ error } = {}) {
 <div class="min-h-screen bg-mesh flex items-center justify-center p-4">
   <div class="w-full max-w-sm bg-navy-900/90 border border-slate-700 rounded-2xl p-8 shadow-2xl">
     <div class="text-center mb-8">
-      <div class="w-14 h-14 rounded-xl bg-navy-800 border border-slate-700 flex items-center justify-center font-serif text-2xl font-bold text-silver-300 mx-auto mb-3">IG</div>
+      <div class="w-14 h-14 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2 mx-auto mb-3"><img src="/assets/logo.png" alt="לוגו" class="w-full h-full object-contain"></div>
       <h1 class="text-white font-bold text-lg">מערכת ניהול האתר</h1>
       <p class="text-slate-400 text-xs mt-1">כניסה למנהלים בלבד</p>
     </div>
@@ -31,7 +31,7 @@ export function renderDashboard() {
 <div class="min-h-screen bg-slate-100">
   <header class="bg-navy-900 text-white px-6 py-4 flex items-center justify-between shadow-lg sticky top-0 z-20">
     <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-lg bg-navy-800 border border-slate-700 flex items-center justify-center font-serif text-lg font-bold text-silver-300">IG</div>
+      <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center p-1"><img src="/assets/logo.png" alt="לוגו" class="w-full h-full object-contain"></div>
       <div>
         <h1 class="font-bold text-sm leading-tight">מערכת ניהול האתר</h1>
         <p class="text-xs text-slate-400">עו"ד ישראל גרוסמן</p>
