@@ -11,7 +11,7 @@ INSERT OR REPLACE INTO site_content (key, value) VALUES
   ('contact_email', 'lawgrossman@gmail.com'),
   ('contact_address', 'רח'' אריה בן אליעזר 21, פתח תקווה'),
   ('contact_address_full', 'רחוב אריה בן אליעזר 21, פתח תקווה (מיקוד 4974410)'),
-  ('contact_whatsapp', '972523636941'),
+  ('contact_whatsapp', '97233036188'),
   ('hero_badge', 'ייצוג משפטי בעל מוניטין ונחישות ללא פשרות'),
   ('hero_title_line1', 'מיצוי זכויות במקרים מורכבים.'),
   ('hero_title_line2', 'מקצועיות, אמינות וניסיון מוכח.'),

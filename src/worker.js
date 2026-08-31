@@ -32,6 +32,7 @@ import {
   getLeads,
   deleteLead,
 } from './db.js';
+import { sendLeadNotification } from './email.js';
 
 function json(data, init = {}) {
   return new Response(JSON.stringify(data), {
@@ -68,14 +69,19 @@ async function handleContact(request, env) {
   if (!name || !phone || !/^0[0-9\-\s]{8,12}$/.test(phone)) {
     return json({ error: 'validation_failed' }, { status: 400 });
   }
-  await createLead(env, {
+  const lead = {
     name,
     phone,
     email: sanitizeText(body.email, 160),
     category: sanitizeText(body.category, 120),
     message: sanitizeText(body.message, 4000),
     source: sanitizeText(body.source, 60) || 'contact_form',
-  });
+  };
+  await createLead(env, lead);
+
+  const content = await getAllContent(env);
+  await sendLeadNotification(env, lead, content.contact_email);
+
   return json({ ok: true });
 }
 
