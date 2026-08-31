@@ -165,7 +165,7 @@ ${renderHeader(c, { activePath: '/' })}
       <div class="lg:col-span-5 relative">
         <div class="relative z-10 bg-navy-900 text-white rounded-3xl p-8 shadow-2xl border border-slate-700">
           <div class="text-center pb-6 border-b border-slate-800">
-            <div class="w-24 h-24 rounded-full bg-white border-4 border-silver-300 mx-auto mb-4 flex items-center justify-center p-3 shadow"><img src="/assets/logo.png" alt="לוגו" class="w-full h-full object-contain"></div>
+            <img src="/assets/israel-grossman.jpg" alt="${escapeHtml(c.site_title)}" class="w-28 h-36 object-cover object-top rounded-2xl border-4 border-silver-300 mx-auto mb-4 shadow">
             <h3 class="text-2xl font-bold">${escapeHtml(c.site_title)}</h3>
             <p class="text-silver-300 text-sm font-medium">מייסד ובעל המשרד</p>
           </div>
