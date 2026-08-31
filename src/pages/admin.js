@@ -83,7 +83,8 @@ const CONTENT_GROUPS = [
     ['about_badge','תגית'], ['about_heading','כותרת'],
     ['about_paragraph1','פסקה 1','textarea'], ['about_paragraph2','פסקה 2','textarea'],
     ['about_quote','ציטוט'],
-    ['about_credential1','נקודת ניסיון 1'], ['about_credential2','נקודת ניסיון 2'], ['about_credential3','נקודת ניסיון 3']
+    ['about_credential1','נקודת ניסיון 1'], ['about_credential2','נקודת ניסיון 2'], ['about_credential3','נקודת ניסיון 3'],
+    ['team_member2_name','שם עורך/ת דין נוסף/ת (השאירו ריק כדי להסתיר)'], ['team_member2_title','תפקיד']
   ]},
   { title: 'מרכז ידע', fields: [
     ['knowledge_heading','כותרת'], ['knowledge_subheading','תת כותרת','textarea']

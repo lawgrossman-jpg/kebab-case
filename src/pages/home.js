@@ -185,6 +185,14 @@ ${renderHeader(c, { activePath: '/' })}
           <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl flex-shrink-0"><i class="fa-solid fa-quote-right"></i></div>
           <p class="text-sm font-medium text-slate-800 italic">"${escapeHtml(c.about_quote)}"</p>
         </div>
+        ${c.team_member2_name ? `
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-navy-100 text-navy-900 flex items-center justify-center text-lg flex-shrink-0"><i class="fa-solid fa-user-tie"></i></div>
+          <div>
+            <p class="text-sm font-bold text-slate-900">${escapeHtml(c.team_member2_name)}</p>
+            <p class="text-xs text-slate-500">${escapeHtml(c.team_member2_title)}</p>
+          </div>
+        </div>` : ''}
       </div>
     </div>
   </div>
