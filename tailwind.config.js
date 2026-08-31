@@ -10,7 +10,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Heebo', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        serif: ['Frank Ruhl Libre', 'serif'],
       },
       typography: () => ({
         DEFAULT: {
