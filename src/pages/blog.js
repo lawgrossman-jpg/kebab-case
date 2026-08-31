@@ -32,6 +32,7 @@ export async function renderBlogIndex(env) {
       { name: 'דף הבית', url: `${siteUrl}/` },
       { name: 'תבעתי ונושעתי', url: `${siteUrl}/blog` },
     ]),
+    siteUrl,
   });
 
   const body = `
@@ -73,6 +74,7 @@ export async function renderArticle(env, slug) {
         { name: article.title, url: `${siteUrl}/blog/${article.slug}` },
       ]),
     ],
+    siteUrl,
   });
 
   const body = `

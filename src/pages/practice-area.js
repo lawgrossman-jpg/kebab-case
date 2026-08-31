@@ -20,6 +20,7 @@ export async function renderPracticeAreaPage(env, slug) {
       { name: 'תחומי עיסוק', url: `${siteUrl}/#practices` },
       { name: area.title, url: `${siteUrl}/practice-areas/${area.slug}` },
     ]),
+    siteUrl,
   });
 
   const otherAreas = allAreas.filter((a) => a.slug !== slug);

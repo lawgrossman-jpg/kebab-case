@@ -15,9 +15,10 @@ export function textToHtmlParagraphs(text) {
     .join('');
 }
 
-export function renderHead({ title, description, canonical, content, jsonLd }) {
+export function renderHead({ title, description, canonical, content, jsonLd, siteUrl }) {
   const safeTitle = escapeHtml(title);
   const safeDescription = escapeHtml(description);
+  const ogImage = siteUrl ? `${siteUrl}/assets/logo.png` : '';
   const jsonLdScripts = (Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [])
     .map((obj) => `<script type="application/ld+json">${JSON.stringify(obj)}</script>`)
     .join('\n');
@@ -30,9 +31,11 @@ export function renderHead({ title, description, canonical, content, jsonLd }) {
     <meta property="og:description" content="${safeDescription}">
     <meta property="og:url" content="${escapeHtml(canonical)}">
     <meta property="og:locale" content="he_IL">
+    ${ogImage ? `<meta property="og:image" content="${escapeHtml(ogImage)}">` : ''}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="${safeTitle}">
     <meta name="twitter:description" content="${safeDescription}">
+    ${ogImage ? `<meta name="twitter:image" content="${escapeHtml(ogImage)}">` : ''}
     <meta name="robots" content="index, follow">
     ${jsonLdScripts}
     ${content || ''}
@@ -44,7 +47,7 @@ export function legalServiceJsonLd(c, siteUrl) {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
     name: c.site_title,
-    image: `${siteUrl}/assets/logo.svg`,
+    image: `${siteUrl}/assets/logo.png`,
     telephone: c.contact_phone,
     email: c.contact_email,
     address: {

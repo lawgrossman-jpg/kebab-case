@@ -67,6 +67,7 @@ export async function renderHome(env) {
     description: c.seo_default_description,
     canonical: `${siteUrl}/`,
     jsonLd: legalServiceJsonLd(c, siteUrl),
+    siteUrl,
   });
 
   const body = `

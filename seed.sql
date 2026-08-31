@@ -41,7 +41,7 @@ INSERT OR REPLACE INTO site_content (key, value) VALUES
   ('footer_note', 'כל הזכויות שמורות'),
   ('seo_default_title', 'משרד עו"ד ישראל גרוסמן | רשלנות רפואית, נזיקין וביטוח'),
   ('seo_default_description', 'משרד עורכי דין ישראל גרוסמן — ייצוג מקצועי בתביעות רשלנות רפואית, תאונות דרכים ונזקי גוף, תביעות ביטוח ומשפט אזרחי-מסחרי. פנייה ראשונית ללא התחייבות.'),
-  ('seo_site_url', 'https://kebab-case.workers.dev');
+  ('seo_site_url', 'https://lawgrossman.com');
 
 INSERT OR REPLACE INTO practice_areas (slug, title, icon, summary, content, seo_title, seo_description, sort_order) VALUES
   ('reshlanut-refuit', 'רשלנות רפואית', 'fa-user-doctor',
