@@ -223,9 +223,31 @@ ${urls.map((u) => `  <url><loc>${u}</loc></url>`).join('\n')}
   return new Response(body, { headers: { 'Content-Type': 'application/xml; charset=utf-8' } });
 }
 
-export default {
-  async fetch(request, env, ctx) {
-    const url = new URL(request.url);
+const CSP = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com",
+  "img-src 'self' data:",
+  "connect-src 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'none'",
+].join('; ');
+
+function withSecurityHeaders(response) {
+  const headers = new Headers(response.headers);
+  headers.set('X-Content-Type-Options', 'nosniff');
+  headers.set('X-Frame-Options', 'DENY');
+  headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  headers.set('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
+  headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  if (!headers.has('Content-Security-Policy')) headers.set('Content-Security-Policy', CSP);
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+}
+
+async function route(request, env, url) {
     const { pathname } = url;
 
     try {
@@ -290,5 +312,12 @@ export default {
       console.error(err);
       return new Response('Internal Server Error', { status: 500 });
     }
+}
+
+export default {
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+    const response = await route(request, env, url);
+    return withSecurityHeaders(response);
   },
 };
